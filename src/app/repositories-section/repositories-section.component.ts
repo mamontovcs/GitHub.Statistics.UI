@@ -13,10 +13,13 @@ export class RepositoriesSectionComponent implements OnInit {
 
   constructor(private _repositoryInfoService: RepositoryInfoService){
   }
-
+  
+  token!: string | null;
   ngOnInit(){
-    this._repositoryInfoService.getRepositories().subscribe(response=>{
-      this.data = response;
-    });
+    // this._repositoryInfoService.getRepositories().subscribe(response=>{
+    //   this.data = response;
+    // });
+
+    this.token = localStorage.getItem("AccessToken");
   }
 }
