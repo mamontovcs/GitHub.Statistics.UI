@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { RepositoryInfo } from '../models/RepositoryInfo';
@@ -11,7 +11,12 @@ export class RepositoryInfoService {
   constructor(private _httpClient: HttpClient) { }
 
   getRepositories(): Observable<RepositoryInfo[]> {
-    var repositoryInfos = this._httpClient.get<Array<RepositoryInfo>>('https://localhost:49153/Test/get');
+
+    const token = localStorage.getItem("AccessToken")?.toString() ?? "";
+    const headers = new HttpHeaders()
+      .set("AccessToken", token.toString());
+
+    var repositoryInfos = this._httpClient.get<Array<RepositoryInfo>>('http://localhost:2508/repositories/test', { 'headers': headers });
     return repositoryInfos;
   }
 }

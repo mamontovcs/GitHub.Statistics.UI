@@ -18,7 +18,7 @@ export class HeaderComponent {
     this.signalRService.addSendAccessTokenToClientListener();   
   }
 
-  OnLogin() {
+  onLogin() {
     this._authenticationService.authtenticate().subscribe(githubLink => {
       let link = JSON.parse(githubLink.toString());
       console.log(link);

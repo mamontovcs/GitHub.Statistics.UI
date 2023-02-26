@@ -1,3 +1,3 @@
 export interface RepositoryInfo{
-    name: string;
+    Name: string;
 }
