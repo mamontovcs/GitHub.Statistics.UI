@@ -9,13 +9,15 @@ import { RepositoriesSectionComponent } from './repositories-section/repositorie
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { RepositoryPageComponent } from './repository-page/repository-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    RepositoriesSectionComponent
+    RepositoriesSectionComponent,
+    RepositoryPageComponent
   ],
   imports: [
     BrowserModule,
