@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AuthenticationService } from '../services/authentication.service';
-import { SignalrService } from '../services/signalr.service';
+import { AuthenticationService } from '../../services/authentication.service';
+import { SignalrService } from '../../services/signalr.service';
 
 
 @Component({
